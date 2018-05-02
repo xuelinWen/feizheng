@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<title>香水产品——Alien美妆商城</title>
+	<style>
+	body{ margin:0; height:100%} 
+html{ height:100%} /*兼容firefox的div高度100%*/ 
+	    *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:1200px;
+            margin:0 auto;
+            text-align: center;
+        }
+
+        ul{
+            list-style-type: none;
+            margin:0;
+            padding:0 15% 0 17%;
+            overflow:hidden;
+            background-color: #fcfcfc;
+        }
+
+        li{
+           float: left;
+           padding-left: 1%;
+        }
+        li a, .dropdown_content{
+            display:inline-block;
+            color:black;
+            text-align: center;
+            padding: 1em 1em;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropdown_content{
+            background-color:white;
+        }
+        .dropdown{
+            display:inline-block;
+            float: left;
+        }
+        .account_ul{
+    display: none;
+    position:absolute;
+    background-color: white;
+    min-width:5em;
+    box-shadow: 0 0.8em 1em 0 rgba(0,0,0,0.2);
+
+}
+.account_ul a{
+    color:black;
+    padding:1em 0.8em;
+    text-decoration: none;
+    display:block;
+}
+.account_ul a:hover{
+    background-color: white;
+    color:pink;
+}
+.dropdown:hover .account_ul{
+    display: block;
+}
+.link{
+    margin-top:0;
+    float: right;
+    padding-right: 18em;
+    padding-top: 1em;
+}
+span{
+    margin-right: -15%;
+}
+span a {
+    color:deeppink;
+}
+
+.search{
+    margin: 6em  0 1em  0;
+    width:26em;
+    height:2.5em;
+    border-color: deeppink;
+    border-style: solid;
+    border-width: 0.26em;
+    outline-style: none;
+}
+
+
+.submit{
+    margin:0;
+    height:2.5em;
+    width:6em;
+    background-color: deeppink;
+    border-color: deeppink;
+    border-style: solid;
+    border-width: 0.26em;
+    color:white;
+    outline-style:none
+
+}
+.category_cat1 ul{
+    margin-left:14%;
+    background-color: white;
+
+}
+.category_cat1 ul li a:hover {
+    color:deeppink;
+}
+.lsidebar{
+	background-color:#fcfcfc;
+}
+#page-menu{
+	height: auto;
+	float: left;
+}
+#page-menu li{
+	width:100%;
+	height:auto;
+	padding-top: 1px;
+
+}
+#page-menu li span a{
+     font-size: 16px;
+     text-decoration-color: #8B6914;
+}
+#page-menu li a{
+    font-size: 13px;
+    color: #8B6914;
+}
+.product_show1{
+    width:36.5em;
+	height:30em;
+    padding-left: 120px;
+}
+
+.product_show1 img{
+    width: 18em;
+    height:15em;
+    float:left;
+}
+
+._blank_one{
+    width:15.5em;
+    height:11em;
+    background-color: #FFF0F5;
+    text-align: center;
+    padding-top:4em;
+}
+
+.pro_intro_one p {
+    padding-bottom: 1em;
+}
+
+.mustcheck_title{
+    color:#3e3e3e;
+    font-size: 1em;
+    font-weight: 600;
+    float: left;
+}
+
+.mustcheck_btn{
+    background-color: deeppink;
+    color:pink;
+    border:none;
+    width:8em;
+    height:2em;
+    outline-style: none;
+}
+.sale-price{
+    border-bottom: 1px solid #eee;
+    border-top:1px solid #eee;
+    padding:10px 15px;
+ }   
+ .count{
+    color:#c69a62;
+    marfin-top:2px;
+}
+ .fr{
+    float:right;
+
+ }
+ .price{
+    color:deeppink;
+    float: left;
+    font-size: 20px;
+ }
+ .dis{
+    text-decoration: line-through;
+ }
+ .illustrate img{
+    margin: 0 auto;
+    width:65em;
+    height:9em;
+    text-align: center;
+    display: block;
+}
+.about{
+    width:65em;
+    height:2em;
+    background-color: pink;
+    display:block;
+    margin: 0 auto;
+}
+.about a{
+    padding-left: 7%;
+    padding-right: 6%;
+    line-height: 2em;
+    color:black;
+    text-decoration: none;
+}
+
+	</style>
+
+</head>
+<body class="gallery-page">
+	    <div class="topbar">
+        <ul>
+            <div class="container">
+                <li><a href="#">关注我们</a></li>
+                <li><a href="/index.html">首页</a></li>
+                <div class="dropdown">
+                    <a href="#" class="dropdown_content">我的帐户</a>
+                    <div class="account_ul">
+                        <a href="http://www.baidu.com">我的订单</a>
+                        <a href="http://www.baidu.com">我的优惠券</a>
+                        <a href="http://www.baidu.com">我的收藏</a>
+                        <a href="http://www.baidu.com">我的评价</a>
+                    </div>
+                </div>
+                <li><a href="#">我的购物车</a></li>
+
+                <span class="link">Welcome to Alien 美妆商城！  <a href="">登陆 </a>或<a href=""> 免费注册</a></span>
+            </div>
+        </ul>
+        <div class="container">
+            <div class="search_input">
+                <input class="search" ><button class="submit" >搜索</button>
+            </div>
+
+            <div class="category">
+                <div class="all_category">
+                    <div class="category_cat1">
+                        <ul>
+                            <li>
+                                <a href="../view/skincare.html">面部护肤</a><font color="#a9a9a9">/</font>
+                                <a href="../view/makeup.html">彩妆</a><font color="#a9a9a9">/</font>
+                                <a href="../view/fragrance.html">香水</a><font color="#a9a9a9">/</font>
+                                <a href="../view/for-him.html">男士专区</a><font color="#a9a9a9">/</font>
+                                <a href="../view/mom-baby-care.html">孕婴护理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div style="clear:both"></div> 
+        <div class="lsidebar" >
+        	<div class="refilter" style="position:absolute; left:2%; width:15%; height:100%;">
+        		<div class="skin_care">
+        			<ul id="page-menu">
+        			    <li>
+        	                <span class="active">
+        			   	        <a href="##">香水</a>
+        			        </span></li>
+        			        <li><a href="http://www.baidu.com">> 女士香水</a></li>
+        			        <li><a href="http://www.baidu.com">> 男士香水</a></li>
+
+        		    </ul>
+        	    </div>
+        	</div>
+        
+        <div class="container" style="margin-left:15%; height:100%;">
+			<div>
+			  <div class="title_one center" style="margin:1%">
+            		<font color="#a9a9a9">_________________________________</font>
+					<big><strong>女士香水</strong></big>
+					<font color="#a9a9a9">_________________________________</font>
+                </div>
+                <div class="clearfix">
+                        <div class="product " style="float:left;width:30%;">
+            	
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_1.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                               <div class="sale-price">
+                                                   <span class="count fr">7.1折</span>
+                                                   <span class="price t1">￥880.0</span>
+                                                   <span class="dis t1"><del>￥1240.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">香奈儿</p>
+                                               <p class="mustcheck_subtit">邂逅喷式香露 绿色气息版 </p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           
+                           <div class="product " style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_2.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                           <div class="sale-price">
+                                                   <span class="count fr">7.1折</span>
+                                                   <span class="price t1">￥845.0</span>
+                                                   <span class="dis t1"><del>￥1190.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">迪奥</p>
+                                               <p class="mustcheck_subtit">迪奥真我-心悦香水(100ml) </p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="product " style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_3.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                            <div class="sale-price">
+                                                   <span class="count fr">8折</span>
+                                                   <span class="price t1">￥424.3</span>
+                                                   <span class="dis t1"><del>￥530.4</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">菲拉格慕</p>
+                                               <p class="mustcheck_subtit">迷人女士香水（30ml）</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="product " style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_4.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">6.3折</span>
+                                                   <span class="price t1">￥165.0</span>
+                                                   <span class="dis t1"><del>￥260.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">伊丽莎白 雅顿</p>
+                                               <p class="mustcheck_subtit">第五大道系列 喷式淡香水(75ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+               
+                           <div class="product " style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_5.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">6折</span>
+                                                   <span class="price t1">￥546.0</span>
+                                                   <span class="dis t1"><del>￥910.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">娇兰</p>
+                                               <p class="mustcheck_subtit">LA PETITE ROBE NOIRE 小黑裙浓香水 (50ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+               
+               
+                           <div class="product " style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/fragrance_6.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">9.1折</span>
+                                                   <span class="price t1">￥638.0</span>
+                                                   <span class="dis t1"><del>￥698.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">蓝色情人</p>
+                                               <p class="mustcheck_subtit">Rosa Eau de Parfume 女士淡香水 (100ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                </div>
+
+ 
+
+            <div class="title_one center" style="margin:1%">
+                <font color="#a9a9a9">_____________________________________</font>
+                <big><strong>男士香水</strong></big>
+                <font color="#a9a9a9">_____________________________________</font>
+            </div>
+            <div class="clearfix">
+                    <div class="product " style="float:left;width:30%;">
+                
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_7.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">5.8折</span>
+                                               <span class="price t1">￥450.8</span>
+                                               <span class="dis t1"><del>￥778.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">法拉利</p>
+                                           <p class="mustcheck_subtit">雪松精华男士香水(100ml)</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+           
+                       <div class="product " style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_8.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">5.1折</span>
+                                               <span class="price t1">￥328.0</span>
+                                               <span class="dis t1"><del>￥645.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">爱马仕</p>
+                                           <p class="mustcheck_subtit">大地男性淡香水(50ml)</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product " style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_9.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">5.4折</span>
+                                               <span class="price t1">￥429.0</span>
+                                               <span class="dis t1"><del>￥800.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">潘海利根</p>
+                                           <p class="mustcheck_subtit">牧羊少年古龙水(50ml)</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product " style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_10.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">7.6折</span>
+                                               <span class="price t1">￥299.0</span>
+                                               <span class="dis t1"><del>￥395.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">安娜苏</p>
+                                           <p class="mustcheck_subtit">筑梦天马淡香水</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product " style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_11.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">9折</span>
+                                               <span class="price t1">￥635.0</span>
+                                               <span class="dis t1"><del>￥705.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">菲拉格慕</p>
+                                           <p class="mustcheck_subtit">Uomo 男士淡香水喷雾</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+           
+                       <div class="product " style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/fragrance_12.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">3.1折</span>
+                                               <span class="price t1">￥199.0</span>
+                                               <span class="dis t1"><del>￥650.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">BURBERRY</p>
+                                           <p class="mustcheck_subtit">英伦迷情男士淡香水</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+           
+            </div>
+
+
+
+			
+			</div>
+			
+        </div>
+               <div class="illustrate">
+            <ul>
+                <img src="../img/index/ending.png">
+            </ul>
+            <div class="about">
+                <a href="http://www.baidu.com">关于我们</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">About us</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">新手上路</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">品牌大全</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">联系我们</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

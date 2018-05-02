@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<title>孕婴护理——Alien美妆商城</title>
+	<style>
+	body{ margin:0; height:100%} 
+html{ height:100%} /*兼容firefox的div高度100%*/ 
+	    *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:1200px;
+            margin:0 auto;
+            text-align: center;
+        }
+
+        ul{
+            list-style-type: none;
+            margin:0;
+            padding:0 15% 0 17%;
+            overflow:hidden;
+            background-color: #fcfcfc;
+        }
+
+        li{
+           float: left;
+           padding-left: 1%;
+        }
+        li a, .dropdown_content{
+            display:inline-block;
+            color:black;
+            text-align: center;
+            padding: 1em 1em;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropdown_content{
+            background-color:white;
+        }
+        .dropdown{
+            display:inline-block;
+            float: left;
+        }
+        .account_ul{
+    display: none;
+    position:absolute;
+    background-color: white;
+    min-width:5em;
+    box-shadow: 0 0.8em 1em 0 rgba(0,0,0,0.2);
+
+}
+.account_ul a{
+    color:black;
+    padding:1em 0.8em;
+    text-decoration: none;
+    display:block;
+}
+.account_ul a:hover{
+    background-color: white;
+    color:pink;
+}
+.dropdown:hover .account_ul{
+    display: block;
+}
+.link{
+    margin-top:0;
+    float: right;
+    padding-right: 18em;
+    padding-top: 1em;
+}
+span{
+    margin-right: -15%;
+}
+span a {
+    color:deeppink;
+}
+
+.search{
+    margin: 6em  0 1em  0;
+    width:26em;
+    height:2.5em;
+    border-color: deeppink;
+    border-style: solid;
+    border-width: 0.26em;
+    outline-style: none;
+}
+
+
+.submit{
+    margin:0;
+    height:2.5em;
+    width:6em;
+    background-color: deeppink;
+    border-color: deeppink;
+    border-style: solid;
+    border-width: 0.26em;
+    color:white;
+    outline-style:none
+
+}
+.category_cat1 ul{
+    margin-left:14%;
+    background-color: white;
+
+}
+.category_cat1 ul li a:hover {
+    color:deeppink;
+}
+.1sidebar{
+	background-color:  #fcfcfc;
+}
+#page-menu{
+	height: auto;
+	float: left;
+}
+#page-menu li{
+	width:100%;
+	height:auto;
+	padding-top: 1px;
+
+}
+#page-menu li span a{
+     font-size: 16px;
+     text-decoration-color: #8B6914;
+}
+#page-menu li a{
+    font-size: 13px;
+    color: #8B6914;
+}
+.product_show1{
+    width:36.5em;
+	height:30em;
+    padding-left: 120px;
+}
+
+.product_show1 img{
+    width: 18em;
+    height:15em;
+    float:left;
+}
+
+._blank_one{
+    width:15.5em;
+    height:11em;
+    background-color: #FFF0F5;
+    text-align: center;
+    padding-top:4em;
+}
+
+.pro_intro_one p {
+    padding-bottom: 1em;
+}
+
+.mustcheck_title{
+    color:#3e3e3e;
+    font-size: 1em;
+    font-weight: 600;
+    float: left;
+}
+
+.mustcheck_btn{
+    background-color: deeppink;
+    color:pink;
+    border:none;
+    width:8em;
+    height:2em;
+    outline-style: none;
+}
+.sale-price{
+    border-bottom: 1px solid #eee;
+    border-top:1px solid #eee;
+    padding:10px 15px;
+ }   
+ .count{
+    color:#c69a62;
+    margin-top:2px;
+}
+ .fr{
+    float:right;
+
+ }
+ .price{
+    color:deeppink;
+    float: left;
+    font-size: 20px;
+ }
+ .dis{
+    text-decoration: line-through;
+ }
+ .illustrate img{
+    margin: 0 auto;
+    width:65em;
+    height:9em;
+    text-align: center;
+    display: block;
+}
+.about{
+    width:65em;
+    height:2em;
+    background-color: pink;
+    display:block;
+    margin: 0 auto;
+}
+.about a{
+    padding-left: 7%;
+    padding-right: 6%;
+    line-height: 2em;
+    color:black;
+    text-decoration: none;
+}
+
+	</style>
+
+</head>
+<body class="gallery-page">
+	    <div class="topbar">
+        <ul>
+            <div class="container">
+                <li><a href="#">关注我们</a></li>
+                <li><a href="#">首页</a></li>
+                <div class="dropdown">
+                    <a href="#" class="dropdown_content">我的帐户</a>
+                    <div class="account_ul">
+                        <a href="http://www.baidu.com">我的订单</a>
+                        <a href="http://www.baidu.com">我的优惠券</a>
+                        <a href="http://www.baidu.com">我的收藏</a>
+                        <a href="http://www.baidu.com">我的评价</a>
+                    </div>
+                </div>
+                <li><a href="#">我的购物车</a></li>
+
+                <span class="link">Welcome to Alien 美妆商城！  <a href="">登陆 </a>或<a href=""> 免费注册</a></span>
+            </div>
+        </ul>
+        <div class="container">
+            <div class="search_input">
+                <input class="search" ><button class="submit" >搜索</button>
+            </div>
+
+            <div class="category">
+                <div class="all_category">
+                    <div class="category_cat1">
+                        <ul>
+                            <li>
+                                    <a href="../view/skincare.html">面部护肤</a><font color="#a9a9a9">/</font>
+                                    <a href="../view/makeup.html">彩妆</a><font color="#a9a9a9">/</font>
+                                    <a href="../view/fragrance.html">香水</a><font color="#a9a9a9">/</font>
+                                    <a href="../view/for-him.html">男士专区</a><font color="#a9a9a9">/</font>
+                                    <a href="../view/mom-baby-care.html">孕婴护理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div style="clear:both"></div> 
+        <div class="1sidebar" >
+        	<div class="refilter" style="position:absolute; left:2%; width:15%; height:100%;">
+        		<div class="skin_care">
+        			<ul id="page-menu">
+        			    <li>
+        	                <span class="active">
+        			   	        <a href="##">孕婴护理</a>
+        			        </span></li>
+        			        <li><a href="http://www.baidu.com">> 婴儿护肤</a></li>
+        			        <li><a href="http://www.baidu.com">> 孕妇护肤</a></li>
+
+        		    </ul>
+        	    </div>
+        	</div>
+        
+        <div class="container" style="margin-left:15%; height:100%;">
+			<div>
+			  <div class="title_one center" style="margin:1%">
+            		<font color="#a9a9a9">_________________________________</font>
+					<big><strong>婴儿护肤</strong></big>
+					<font color="#a9a9a9">_________________________________</font>
+                </div>
+                <div class="clearfix">
+                        <div class="product" style="float:left;width:30%;">
+            	
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_1.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                               <div class="sale-price">
+                                                   <span class="count fr">9.4折</span>
+                                                   <span class="price t1">￥112.8</span>
+                                                   <span class="dis t1"><del>￥120.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">施巴</p>
+                                               <p class="mustcheck_subtit">婴儿身体润肤乳(200ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           
+                           <div class="product" style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_2.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                           <div class="sale-price">
+                                                   <span class="count fr">5.6折</span>
+                                                   <span class="price t1">￥60.0</span>
+                                                   <span class="dis t1"><del>￥108.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">MUSTELA</p>
+                                               <p class="mustcheck_subtit">维他命换片护肤膏</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="product" style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_3.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                            <div class="sale-price">
+                                                   <span class="count fr">9.1折</span>
+                                                   <span class="price t1">￥159.0</span>
+                                                   <span class="dis t1"><del>￥175.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">加州宝宝</p>
+                                               <p class="mustcheck_subtit">金盏花面霜（50g）</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="product" style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_4.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">7.7折</span>
+                                                   <span class="price t1">￥77.0</span>
+                                                   <span class="dis t1"><del>￥100.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">香蕉船</p>
+                                               <p class="mustcheck_subtit">香蕉船儿童防晒乳SPF50（90ml）</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+               
+                           <div class="product" style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_5.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">5.8折</span>
+                                                   <span class="price t1">￥255.0</span>
+                                                   <span class="dis t1"><del>￥439.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">瑞士葆丽美</p>
+                                               <p class="mustcheck_subtit">防水温和防晒乳液SPF40(100ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+               
+               
+                           <div class="product" style="float:left;width:30%;">
+                               
+                                <div class="product_show1">
+                                   <img src="../img/index/mbc_6.png">
+                                   <div class="product_show_one">
+                                       <div class="_blank_one">
+                                           <div class="pro_intro_one">
+                                              <div class="sale-price">
+                                                   <span class="count fr">3.6折</span>
+                                                   <span class="price t1">￥77.0</span>
+                                                   <span class="dis t1"><del>￥215.0</del></span> 
+                                               </div>
+                                               <p class="mustcheck_title">LOVE BOO</p>
+                                               <p class="mustcheck_subtit">宝宝奇迹按摩油(100ml)</p>
+                                               <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                </div>
+
+ 
+
+            <div class="title_one center" style="margin:1%">
+                <font color="#a9a9a9">_____________________________________</font>
+                <big><strong>孕妇护肤</strong></big>
+                <font color="#a9a9a9">_____________________________________</font>
+            </div>
+            <div class="clearfix">
+                    <div class="product" style="float:left;width:30%;">
+                
+                            <div class="product_show1">
+                               <img src="../img/index/mbc_7.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">6.2折</span>
+                                               <span class="price t1">￥328.0</span>
+                                               <span class="dis t1"><del>￥530.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">娇韵诗</p>
+                                           <p class="mustcheck_subtit">天然调和身体护理油（100ml）</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+           
+                       <div class="product" style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/mbc_8.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">3.7折</span>
+                                               <span class="price t1">￥55.0</span>
+                                               <span class="dis t1"><del>￥148.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">HEALTH N NATURE</p>
+                                           <p class="mustcheck_subtit">羊胎素羊脂膏/绵羊油</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product" style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/mbc_9.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">7.6折</span>
+                                               <span class="price t1">￥258.0</span>
+                                               <span class="dis t1"><del>￥339.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">帕玛氏</p>
+                                           <p class="mustcheck_subtit">高效除妊娠按摩膏及喷雾套装 (2件)</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product" style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/mbc_10.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">6.3折</span>
+                                               <span class="price t1">￥209.0</span>
+                                               <span class="dis t1"><del>￥330.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">COWSHED</p>
+                                           <p class="mustcheck_subtit">超凡柔美妊娠纹霜</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="product" style="float:left;width:30%;">
+                           
+                            <div class="product_show1">
+                               <img src="../img/index/for-him_11.png">
+                               <div class="product_show_one">
+                                   <div class="_blank_one">
+                                       <div class="pro_intro_one">
+                                          <div class="sale-price">
+                                               <span class="count fr">8.2折</span>
+                                               <span class="price t1">￥205.0</span>
+                                               <span class="dis t1"><del>￥250.0</del></span> 
+                                           </div>
+                                           <p class="mustcheck_title">唯美思佳</p>
+                                           <p class="mustcheck_subtit">原美妊娠修复霜</p>
+                                           <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+           
+            </div>
+
+
+
+			
+			</div>
+			
+        </div>
+               <div class="illustrate">
+            <ul>
+                <img src="../img/index/ending.png">
+            </ul>
+            <div class="about">
+                <a href="http://www.baidu.com">关于我们</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">About us</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">新手上路</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">品牌大全</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">联系我们</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

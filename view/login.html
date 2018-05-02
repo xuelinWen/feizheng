@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欢迎登陆</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body>
+    <div id="login">
+        <div class="login_container main_center">
+            <h1 class="center">Welcome to Alien美妆商城</h1>
+            <div class="login_tab">
+                <div class="title clearfix">
+                    <div data-userType="1" class="manger fl active tab">管理员登陆</div>
+                    <div data-userType="2" class="commonUser fl tab">普通用户登陆</div>
+                </div>
+                <div class="content">
+                    <div class="input-group input-group-sm userCode">
+                        <input type="text" class="form-control user_account" placeholder="请输入账号" aria-describedby="sizing-addon3">
+                    </div>
+                    <div class="input-group input-group-sm userPwd">
+                        <input type="password" class="form-control user_password" placeholder="请输入密码" aria-describedby="sizing-addon3">
+                    </div>
+                    <div class="my_btn">
+                        <button type="button" class="btn btn-info" id="btn_login">登陆</button>
+                        <button type="button" class="btn btn-default" id="btn_register">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../lib/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script>
+    $(function () {
+        // 切换用户类型
+        $('.login_tab .tab').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+        // 点击登陆
+        $('#btn_login').on('click', function () {
+            var userType = $('.login_tab .tab').attr('data-userType');
+            var userName = $('.user_account').val();
+            var password = $('.user_password').val();
+            // console.log(userCode);
+            // console.log(pwd);
+            // console.log(userType);
+            $.ajax({
+                // url: "/testwxopen/api/login/login",
+                // type:"post",
+                url:"../data/userInfo.json",
+                dataType:"json",
+                type:"get",
+                data: {
+                    userType: userType,
+                    userName: userName,
+                    password: password
+                },
+                success: function (res) {
+                    if (res.status == 200) {
+                        console.log('请求成功');
+                        window.location.href = "/index.html";
+                    }else{
+                        alert('登陆失败'+res.desc);
+                    }
+                },
+                error: function () {
+                    console.log('请求失败');
+                }
+            })
+        })
+        // 点击注册
+        $('#btn_register').on('click' , function(){
+            window.location.href = '/register.html';
+        })
+    })
+</script>

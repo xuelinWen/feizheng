@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <title>面部护肤产品——Alien美妆商城</title>
+	<style>
+            body{ margin:0; height:100%;font-size: 12px;} 
+        html{ height:100%} /*兼容firefox的div高度100%*/ 
+                *{
+                    margin:0;
+                    padding:0;
+                }
+                .container{
+                    width:1200px;
+                    margin:0 auto;
+                    text-align: center;
+                }
+        
+                ul{
+                    list-style-type: none;
+                    margin:0;
+                    padding:0 15% 0 17%;
+                    overflow:hidden;
+                    background-color: #fcfcfc;
+                }
+        
+                li{
+                   float: left;
+                   padding-left: 1%;
+                }
+                li a, .dropdown_content{
+                    display:inline-block;
+                    color:black;
+                    text-align: center;
+                    padding: 1em 1em;
+                    text-decoration: none;
+                }
+        
+                li a:hover, .dropdown:hover .dropdown_content{
+                    background-color:white;
+                }
+                .dropdown{
+                    display:inline-block;
+                    float: left;
+                }
+                .account_ul{
+            display: none;
+            position:absolute;
+            background-color: white;
+            min-width:5em;
+            box-shadow: 0 0.8em 1em 0 rgba(0,0,0,0.2);
+        
+        }
+        .account_ul a{
+            color:black;
+            padding:1em 0.8em;
+            text-decoration: none;
+            display:block;
+        }
+        .account_ul a:hover{
+            background-color: white;
+            color:pink;
+        }
+        .dropdown:hover .account_ul{
+            display: block;
+        }
+        .link{
+            margin-top:0;
+            float: right;
+            padding-right: 18em;
+            padding-top: 1em;
+        }
+        span{
+            margin-right: -15%;
+        }
+        span a {
+            color:deeppink;
+        }
+        
+        .search{
+            margin: 6em  0 1em  0;
+            width:26em;
+            height:2.5em;
+            border-color: deeppink;
+            border-style: solid;
+            border-width: 0.26em;
+            outline-style: none;
+        }
+        
+        
+        .submit{
+            margin:0;
+            height:2.5em;
+            width:6em;
+            background-color: deeppink;
+            border-color: deeppink;
+            border-style: solid;
+            border-width: 0.26em;
+            color:white;
+            outline-style:none
+        
+        }
+        .category_cat1 ul{
+            margin-left:14%;
+            background-color: white;
+        
+        }
+        .category_cat1 ul li a:hover {
+            color:deeppink;
+        }
+        .1sidebar{
+            background-color:  #fcfcfc;
+        }
+        #page-menu{
+            height: auto;
+            float: left;
+        }
+        #page-menu li{
+            width:100%;
+            height:auto;
+            padding-top: 1px;
+        
+        }
+        #page-menu li span a{
+             font-size: 16px;
+             text-decoration-color: #8B6914;
+        }
+        #page-menu li a{
+            font-size: 13px;
+            color: #8B6914;
+        }
+        .product_show1{
+            width:36.5em;
+            height:30em;
+            padding-left: 120px;
+        }
+        
+        .product_show1 img{
+            width: 18em;
+            height:15em;
+            float:left;
+        }
+        
+        ._blank_one{
+            width:15.5em;
+            height:11em;
+            background-color: #FFF0F5;
+            text-align: center;
+            padding-top:4em;
+        }
+        
+        .pro_intro_one p {
+            padding-bottom: 1em;
+        }
+        
+        .mustcheck_title{
+            color:#3e3e3e;
+            font-size: 1em;
+            font-weight: 600;
+            float: left;
+        }
+        
+        .mustcheck_btn{
+            background-color: deeppink;
+            color:pink;
+            border:none;
+            width:8em;
+            height:2em;
+            outline-style: none;
+        }
+        .sale-price{
+            border-bottom: 1px solid #eee;
+            border-top:1px solid #eee;
+            padding:10px 15px;
+         }   
+         .count{
+            color:#c69a62;
+            margin-top:2px;
+        }
+         .fr{
+            float:right;
+        
+         }
+         .price{
+            color:deeppink;
+            float: left;
+            font-size: 20px;
+         }
+         .dis{
+            text-decoration: line-through;
+         }
+         .illustrate img{
+            margin: 0 auto;
+            width:65em;
+            height:9em;
+            text-align: center;
+            display: block;
+        }
+        .about{
+            width:65em;
+            height:2em;
+            background-color: pink;
+            display:block;
+            margin: 0 auto;
+        }
+        .about a{
+            padding-left: 7%;
+            padding-right: 6%;
+            line-height: 2em;
+            color:black;
+            text-decoration: none;
+        }
+        
+            </style>
+
+</head>
+
+<body class="gallery-page">
+    <div class="topbar">
+        <ul>
+            <div class="container">
+                <li>
+                    <a href="#">关注我们</a>
+                </li>
+                <li>
+                    <a href="/index.html">首页</a>
+                </li>
+                <div class="dropdown">
+                    <a href="#" class="dropdown_content">我的帐户</a>
+                    <div class="account_ul">
+                        <a href="http://www.baidu.com">我的订单</a>
+                        <a href="http://www.baidu.com">我的优惠券</a>
+                        <a href="http://www.baidu.com">我的收藏</a>
+                        <a href="http://www.baidu.com">我的评价</a>
+                    </div>
+                </div>
+                <li>
+                    <a href="#">我的购物车</a>
+                </li>
+
+                <span class="link">Welcome to Alien 美妆商城！
+                    <a href="">登陆 </a>或
+                    <a href=""> 免费注册</a>
+                </span>
+            </div>
+        </ul>
+        <div class="container">
+            <div class="search_input">
+                <input class="search">
+                <button class="submit">搜索</button>
+            </div>
+
+            <div class="category">
+                <div class="all_category">
+                    <div class="category_cat1">
+                        <ul>
+                            <li>
+                                <a href="../view/skincare.html">面部护肤</a>
+                                <font color="#a9a9a9">/</font>
+                                <a href="../view/makeup.html">彩妆</a>
+                                <font color="#a9a9a9">/</font>
+                                <a href="../view/fragrance.html">香水</a>
+                                <font color="#a9a9a9">/</font>
+                                <a href="../view/for-him.html">男士专区</a>
+                                <font color="#a9a9a9">/</font>
+                                <a href="../view/mom-baby-care.html">孕婴护理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="clear:both"></div>
+        <div class="1sidebar">
+            <div class="refilter" style="position:absolute; left:2%; width:15%; height:100%;">
+                <div class="skin_care">
+                    <ul id="page-menu">
+                        <li>
+                            <span class="active">
+                                <a href="##">面部护肤</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a href="http://www.baidu.com">> 化妆水</a>
+                        </li>
+                        <li>
+                            <a href="http://www.baidu.com">> 精华</a>
+                        </li>
+                        <li>
+                            <a href="http://www.baidu.com">> 眼霜</a>
+                        </li>
+                        <li>
+                            <a href="http://www.baidu.com">> 卸妆</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container" style="margin-left:15%; height:100%;">
+                <div>
+                    <div class="title_one center" style="margin:1%">
+                        <font color="#a9a9a9">_________________________________</font>
+                        <big>
+                            <strong>化妆水</strong>
+                        </big>
+                        <font color="#a9a9a9">_________________________________</font>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_1.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">8.2折</span>
+                                            <span class="price t1">￥239.0</span>
+                                            <span class="dis t1">
+                                                <del>￥290.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">悦木之源</p>
+                                        <p class="mustcheck_subtit">韦博士灵芝焕能精华水</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_2.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.6折</span>
+                                            <span class="price t1">￥842.0</span>
+                                            <span class="dis t1">
+                                                <del>￥1280.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">SK-II</p>
+                                        <p class="mustcheck_subtit">护肤精华露(神仙水)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_3.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">5.3折</span>
+                                            <span class="price t1">￥95.0</span>
+                                            <span class="dis t1">
+                                                <del>￥180.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">理肤泉</p>
+                                        <p class="mustcheck_subtit">温泉舒缓喷液(300亳升)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_4.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.2折</span>
+                                            <span class="price t1">￥159.0</span>
+                                            <span class="dis t1">
+                                                <del>￥220.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">瑞士葆丽美</p>
+                                        <p class="mustcheck_subtit">活氧细胞美肌水</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_5.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.6折</span>
+                                            <span class="price t1">￥58.0</span>
+                                            <span class="dis t1">
+                                                <del>￥88.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">薏仁化妆水</p>
+                                        <p class="mustcheck_subtit">舒缓/抗敏感</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_6.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.1折</span>
+                                            <span class="price t1">￥299.0</span>
+                                            <span class="dis t1">
+                                                <del>￥420.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">雅诗兰黛</p>
+                                        <p class="mustcheck_subtit">红石榴系列 滋润型</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_7.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">9.1折</span>
+                                            <span class="price t1">￥300.0</span>
+                                            <span class="dis t1">
+                                                <del>￥330.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">科颜氏</p>
+                                        <p class="mustcheck_subtit">金盏花爽肤水(250毫升)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_8.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.5折</span>
+                                            <span class="price t1">￥312.0</span>
+                                            <span class="dis t1">
+                                                <del>￥480.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">雪肌精</p>
+                                        <p class="mustcheck_subtit">药用雪肌精药用美白化妆水</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_9.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.1折</span>
+                                            <span class="price t1">￥299.0</span>
+                                            <span class="dis t1">
+                                                <del>￥420.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">雅诗兰黛</p>
+                                        <p class="mustcheck_subtit">红石榴系列 滋润型</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title_one center" style="margin:1%">
+                        <font color="#a9a9a9">_____________________________________</font>
+                        <big>
+                            <strong>精华</strong>
+                        </big>
+                        <font color="#a9a9a9">_____________________________________</font>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_10.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">5.5折</span>
+                                            <span class="price t1">￥319.0</span>
+                                            <span class="dis t1">
+                                                <del>￥585.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">伊丽莎白 雅顿</p>
+                                        <p class="mustcheck_subtit">升级版金装时空修护胶囊（60粒）</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_11.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">3.6折</span>
+                                            <span class="price t1">￥56.0</span>
+                                            <span class="dis t1">
+                                                <del>￥155.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">兰蔻 Lancome </p>
+                                        <p class="mustcheck_subtit">小黑瓶精华肌底液 小样7ml</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_12.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.6折</span>
+                                            <span class="price t1">￥650.0</span>
+                                            <span class="dis t1">
+                                                <del>￥850.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">雅诗兰黛</p>
+                                        <p class="mustcheck_subtit">特润修护肌透精华露(小棕瓶) 第六代</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_13.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.8折</span>
+                                            <span class="price t1">￥349.0</span>
+                                            <span class="dis t1">
+                                                <del>￥450.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">科颜氏</p>
+                                        <p class="mustcheck_subtit">夜间修护精华液 (30毫升)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_14.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7折</span>
+                                            <span class="price t1">￥1010.0</span>
+                                            <span class="dis t1">
+                                                <del>￥1440.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">SK-II</p>
+                                        <p class="mustcheck_subtit">肌因光蕴祛斑精华露</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_15.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.3折</span>
+                                            <span class="price t1">￥168.0</span>
+                                            <span class="dis t1">
+                                                <del>￥230.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">A.H.C</p>
+                                        <p class="mustcheck_subtit">黄金蜗牛玻尿酸精华</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="title_one center" style="margin:1%">
+                        <font color="#a9a9a9">_________________________________</font>
+                        <big>
+                            <strong>眼霜</strong>
+                        </big>
+                        <font color="#a9a9a9">_________________________________</font>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_16.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.2折</span>
+                                            <span class="price t1">￥345.0</span>
+                                            <span class="dis t1">
+                                                <del>￥560.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">兰蔻</p>
+                                        <p class="mustcheck_subtit">精华眼膜霜（15ml）</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_17.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.4折</span>
+                                            <span class="price t1">￥385.0</span>
+                                            <span class="dis t1">
+                                                <del>￥520.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">资生堂</p>
+                                        <p class="mustcheck_subtit">盼丽风姿 抗皱修护眼霜</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_18.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">9.8折</span>
+                                            <span class="price t1">￥255.0</span>
+                                            <span class="dis t1">
+                                                <del>￥260.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">巴黎欧莱雅</p>
+                                        <p class="mustcheck_subtit">活肌修护眼霜</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_19.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">1.2折</span>
+                                            <span class="price t1">￥172.0</span>
+                                            <span class="dis t1">
+                                                <del>￥1431.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">MVSK</p>
+                                        <p class="mustcheck_subtit">矜贵黑曜石鲟鱼子全效眼霜 </p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_20.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.6折</span>
+                                            <span class="price t1">￥92.0</span>
+                                            <span class="dis t1">
+                                                <del>￥140.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">A.H.C</p>
+                                        <p class="mustcheck_subtit">第四代多重功效眼霜(30ml)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_21.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">9.1折</span>
+                                            <span class="price t1">￥309.0</span>
+                                            <span class="dis t1">
+                                                <del>￥340.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">fresh</p>
+                                        <p class="mustcheck_subtit">玫瑰润泽明眸眼部凝霜</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="title_one center" style="margin:1%">
+                        <font color="#a9a9a9">_________________________________</font>
+                        <big>
+                            <strong>卸妆</strong>
+                        </big>
+                        <font color="#a9a9a9">_________________________________</font>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_22.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">7.1折</span>
+                                            <span class="price t1">￥89.0</span>
+                                            <span class="dis t1">
+                                                <del>￥125.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">芭妮兰</p>
+                                        <p class="mustcheck_subtit">致柔卸妆膏(100毫升)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_23.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">5.6折</span>
+                                            <span class="price t1">￥128.0</span>
+                                            <span class="dis t1">
+                                                <del>￥228.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">贝德玛</p>
+                                        <p class="mustcheck_subtit">舒妍多效洁肤液(500ml)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product" style="float:left;width:30%;">
+
+                        <div class="product_show1">
+                            <img src="../img/index/skincare_24.png">
+                            <div class="product_show_one">
+                                <div class="_blank_one">
+                                    <div class="pro_intro_one">
+                                        <div class="sale-price">
+                                            <span class="count fr">6.4折</span>
+                                            <span class="price t1">￥145.0</span>
+                                            <span class="dis t1">
+                                                <del>￥228.0</del>
+                                            </span>
+                                        </div>
+                                        <p class="mustcheck_title">fancl</p>
+                                        <p class="mustcheck_subtit">净化修护卸妆液(120ml)</p>
+                                        <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <div class="illustrate">
+                <ul>
+                    <img src="../img/index/ending.png">
+                </ul>
+                <div class="about">
+                    <a href="http://www.baidu.com">关于我们</a>
+                    <font color="grey">|</font>
+                    <a href="http://www.baidu.com">About us</a>
+                    <font color="grey">|</font>
+                    <a href="http://www.baidu.com">新手上路</a>
+                    <font color="grey">|</font>
+                    <a href="http://www.baidu.com">品牌大全</a>
+                    <font color="grey">|</font>
+                    <a href="http://www.baidu.com">联系我们</a>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

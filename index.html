@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>index</title>
+    <!–[if lt IE 9]>
+    <script src="http://cdn.staticfile.org/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+    <![endif]–>
+    <link rel = "stylesheet"  href = "./css/common.css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+
+</head>
+<body class="index-page">
+    <div class="index_home">
+        <ul>
+            <div class="container">
+                <li><a href="#">关注我们</a></li>
+                <li><a href="#">首页</a></li>
+                <div class="dropdown">
+                    <a href="#" class="dropdown_content">我的帐户</a>
+                    <div class="account_ul">
+                        <a href="http://www.baidu.com">我的订单</a>
+                        <a href="http://www.baidu.com">我的优惠券</a>
+                        <a href="http://www.baidu.com">我的收藏</a>
+                        <a href="http://www.baidu.com">我的评价</a>
+                    </div>
+                </div>
+                <li><a href="#">我的购物车</a></li>
+
+                <span class="link">Welcome to Alien 美妆商城！  <a href="/view/login.html">登陆 </a>或<a href="/view/register.html"> 免费注册</a></span>
+            </div>
+        </ul>
+        <div class="container">
+            <div class="search_input">
+                <input class="search" ><button class="submit" >搜索</button>
+            </div>
+
+            <div class="category">
+                <div class="all_category">
+                    <div class="category_cat1">
+                        <ul>
+                            <li>
+                                <a href="./view/skincare.html">面部护肤</a><font color="#a9a9a9">/</font>
+                                <a href="./view/makeup.html">彩妆</a><font color="#a9a9a9">/</font>
+                                <a href="./view/fragrance.html">香水</a><font color="#a9a9a9">/</font>
+                                <a href="./view/for-him.html">男士专区</a><font color="#a9a9a9">/</font>
+                                <a href="./view/mom-baby-care.html">孕婴护理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img_html">
+            <div class="ui-slider">
+                <div class="ui-slider-content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/index/img1.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/index/img2.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/index/img3.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/index/img4.png"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/index/img5.png"/>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="product" id="product">
+
+            </div>
+        </div>
+
+        <!-- <div class="cut_off">
+            <font color="#a9a9a9">________________________________________</font><big><strong> 销售排行榜 TOP 10</strong></big><font color="#a9a9a9">________________________________________</font>
+        </div> -->
+
+        <div class="illustrate">
+            <img src="img/index/ending.png">
+            <div class="about">
+                <a href="http://www.baidu.com">关于我们</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">About us</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">新手上路</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">品牌大全</a><font color="grey">|</font>
+                <a href="http://www.baidu.com">联系我们</a>
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/template" id="template_product_item">
+        <div class="cut_off">
+            <font color="#a9a9a9">________________________________________</font>
+            <big><strong>每日必看 MUST CHECK</strong></big>
+            <font color="#a9a9a9">________________________________________</font>
+        </div>
+        <!-- 模板 -->
+        <div class="product_center clearfix" id="product_center">
+            {{each dataList}}
+            <div class="product_show1 clearfix">
+                    <img src={{$value.imgSrc}}>
+                    <div class="product_show_one">
+                        <div class="_blank_one">
+                            <div class="pro_intro_one">
+                                <p class="mustcheck_title">{{$value.title1}}</p>
+                                <p class="mustcheck_subtit">{{$value.title2}}</p>
+                                <p class="mustcheck_date">{{$value.title3}}</p>
+                                <button class="mustcheck_btn" src="http://www.baidu.com">立刻抢购</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        
+    </script>
+    <script  src="./lib/jquery.js"></script>
+    <script  src="./lib/template.js"></script>
+        <script src="./lib/swiper/swiper.min.js"></script>
+        <script>
+            $(function(){
+                var mySwiper = new Swiper ('.swiper-container', {
+                    autoplay: 5000,//自动播放时间
+                    autoplayDisableOnInteraction : false,//即使手动滑动之后， 定时器也不会被清除
+                    loop: true,//开启loop模式
+                    prevButton:'.swiper-button-prev',
+                    nextButton:'.swiper-button-next',
+                    pagination : '.swiper-pagination',
+                })
+
+                // 获取商品列表数据
+                $.ajax({
+                    type: "POST",//请求方式
+                    url: "./data/index.json",//请求地址
+                    dataType: "json",
+                    type:"get",
+    　　　　　　　　　success: function(result){//
+                        var html = template("template_product_item",result);
+                        $('#product').html(html);
+                    }
+                });
+            })
+        </script>
+</body>
+</html>
